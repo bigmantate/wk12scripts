@@ -14,14 +14,6 @@ echo '$100'
 
 sleep 3
 
-echo "We will use the shell's here document feature to show the date"
-
-DATE=$(date)
-cat <<EOF
-Date: $DATE
-
-sleep 2
-
 echo "Using the grep command and enclosing the entire string in single quotes"
 echo "produces some interesting output using quotes in different ways"
 
@@ -29,5 +21,12 @@ sleep 2
 
 grep 'r.*t' /etc/passwd
 
-echo ""
+sleep 2
+
+echo "We will use the shell's here document feature to show the date"
+
+DATE=$(date)
+cat <<EOF
+Date: $DATE
+
 
